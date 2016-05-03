@@ -1,0 +1,139 @@
+$blueprint-light: lighten(#2D86C4, 41%)
+$blueprint-text: lighten($blueprint-light, 5%)
+$blueprint-out: darken($blueprint-light, 5%)
+$blueprint-dark: lighten(#2D86C4, 25%)
+
+*
+	font-size: 16px
+	font-family: 'Roboto', sans-serif
+body
+	margin: 0
+	padding: 0
+.top-nav
+	width: 100%
+	height: 4rem
+	position: fixed
+	display: flex
+	justify-content: space-between
+	align-items: center
+	padding: 0 1.5rem
+	box-sizing: border-box
+	background: $blueprint-light
+	border-bottom: 1px solid $blueprint-out
+	z-index: 9
+	> div
+		display: flex
+		align-items: center
+		flex-direction: row
+	.logo
+		.logo-img
+			width: 2.75rem
+			height: 2.75rem
+			border: 1px dashed $blueprint-dark
+			border-radius: 8px
+			margin-right: 1rem
+		.logo-text
+			background: $blueprint-text
+			padding: 2px 8px
+			font-size: .9rem
+			color: transparent
+	.top-nav-options
+		.search-bar
+			width: 8rem
+			height: 1.5rem
+			background: $blueprint-text
+			border: 1px solid $blueprint-out
+			box-sizing: border-box
+			border-radius: 10px
+		.account-ui
+			width: 1.75rem
+			height: 1.75rem
+			border-radius: 99px
+			background: $blueprint-out
+			box-sizing: border-box
+			margin-left: 1rem
+.side-nav
+	width: 13rem
+	height: calc(100% - 4rem)
+	border-right: 1px solid $blueprint-out
+	position: fixed
+	left: 0
+	bottom: 0
+	display: flex
+	justify-content: space-between
+	align-items: center
+	flex-direction: column
+	.drop-file-wrap
+		padding: .75rem 0
+		width: 100%
+		border-bottom: 1px solid $blueprint-out
+		background: $blueprint-text
+		.drop-file
+			width: calc(100% - 1.4rem)
+			height: 5rem
+			border: 1px dashed white
+			border-radius: 6px
+			margin: auto
+	.list-wrap
+		width: 100%
+		padding: 0 10px
+		padding-left: 1.5rem
+		box-sizing: border-box
+		.section-list-wrap
+			width: 100%
+			.section-title
+				width: 4rem
+				height: .9rem
+				background: $blueprint-text
+				margin-bottom: 1rem
+				display: block
+			.item-wrap
+				width: 100%
+				height: 1.5rem
+				box-sizing: border-box
+				display: flex
+				align-items: center
+				margin-bottom: .75rem
+				.item-ui
+					width: 18px
+					height: 18px
+					border-radius: 10px
+					border: 1px solid $blueprint-light
+					box-sizing: border-box
+					margin-right: .75rem
+				.item-text
+					height: 75%
+					background: $blueprint-out
+				.s
+					width: 4rem
+				.m
+					width: 5rem
+				.l
+					width: 7rem
+	.side-footer
+		width: 100%
+		height: 2rem
+		border-top: 1px solid $blueprint-light
+		padding: 0 12px
+		box-sizing: border-box
+		display: flex
+		align-items: center
+		.footer-text-wrap
+			width: 100%
+			height: .8rem
+			display: flex
+			justify-content: space-between
+			position: relative
+			> div
+				background: $blueprint-light
+			.text-1
+				width: 100%
+			.text-2
+				width: 3rem
+				margin-left: .5rem
+main
+	width: calc(100% - 13rem)
+	position: absolute
+	top: 4rem
+	right: 0
+	z-index: 1
